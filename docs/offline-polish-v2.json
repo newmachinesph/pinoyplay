@@ -1,0 +1,105 @@
+{
+  "assets": {
+    "probeFailed": true,
+    "files": [
+      {
+        "file": "audio/barrio.mp3",
+        "status": 200,
+        "bytes": 945048
+      },
+      {
+        "file": "audio/islands.mp3",
+        "status": 200,
+        "bytes": 945048
+      },
+      {
+        "file": "audio/ascent.mp3",
+        "status": 200,
+        "bytes": 945048
+      },
+      {
+        "file": "games/volcano-escape/lava.webp",
+        "status": 200,
+        "bytes": 283698
+      },
+      {
+        "file": "games/jeepney-rush/cover.webp",
+        "status": 200,
+        "bytes": 305778
+      }
+    ],
+    "online": false
+  },
+  "games": [
+    {
+      "id": "jeepney-rush",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "patintero",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "tricycle-parking",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "island-boat-racing",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "tumbang-preso",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "basketball-sa-kanto",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "piko-challenge",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "halo-halo-shop",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "coconut-catcher",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    },
+    {
+      "id": "volcano-escape",
+      "phase": "running",
+      "canvases": 1,
+      "overflow": false,
+      "badControls": []
+    }
+  ]
+}

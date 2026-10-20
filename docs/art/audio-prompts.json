@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-20",
+  "provider": "Gemini browser music generation",
+  "conversation": "https://gemini.google.com/app/4852799af601ae2f",
+  "tracks": [
+    {
+      "output": "public/audio/barrio.mp3",
+      "original": "Sunday_in_the_Barrio.mp3",
+      "prompt": "Create an original instrumental background track for PinoyPlay, a cheerful Filipino mobile arcade. 60 seconds, 108 BPM, 4/4, D major. Warm rondalla-style plucked bandurria and acoustic guitar melody, light bamboo percussion, soft bass, tiny kulintang-like bell accents, breezy neighborhood fiesta atmosphere. No vocals, no speech, no recognizable existing tune. Keep it restrained behind game effects, gentle transients, no huge drops. Start immediately on the downbeat and end on a matching D-major downbeat so it can be looped smoothly. Produce the actual playable music file."
+    },
+    {
+      "output": "public/audio/islands.mp3",
+      "original": "Sunlight_off_the_Water.mp3",
+      "prompt": "Generate a second actual music track, titled Island Current. Original 45-second instrumental loop for a Filipino outrigger boat racing and coconut-catching game. 104 BPM, 4/4, G major. Breezy acoustic guitar and bandurria plucks, restrained bamboo hand percussion, warm bass, airy marimba-like notes. Playful and relaxed but gently propulsive. No singing, voices, speech, ocean recordings or sound effects. Avoid copying any known song. Consistent quiet backing arrangement, immediate downbeat, matching final cadence for a smooth game loop. Return playable downloadable audio."
+    },
+    {
+      "output": "public/audio/ascent.mp3",
+      "original": "Toward_the_Cloud_Line.mp3",
+      "prompt": "Create the next actual instrumental music file titled Mayon Ascent. A 60-second original looping soundtrack for a family-friendly Filipino volcano platform game: 116 BPM, D minor, low pulsing strings, dry bamboo percussion, restrained kulintang-like metallic melody and dark plucked acoustic guitar, rising adventure tension without horror or abrasive noise. No vocals or speech, no sound effects, no known melodies. Balanced game backing mix, no long intro, no huge volume spikes, musical final cadence suitable for looping. Return playable downloadable music."
+    }
+  ],
+  "processing": "First minute trimmed, last and first seconds crossfaded, resulting 59-second loops normalized to -18 LUFS and -2 dBTP targets; 44.1 kHz stereo MP3 at 128 kb/s.",
+  "comparison": "Grok CLI was authenticated but returned HTTP 402, usage balance exhausted. No Grok audio sample or head-to-head listening comparison was obtained."
+}

@@ -1,0 +1,68 @@
+{
+  "generator": "gpt-image-2 via the codex CLI (ChatGPT subscription), 2026-10-20",
+  "to3d": "microsoft/TRELLIS.2-4B (MIT) on Modal A100-80GB via scripts/trellis2_modal.py; DINOv3 ViT-L/16 weights from timm (DINOv3 License), BiRefNet (MIT)",
+  "shared_style": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people.",
+  "sheets": {
+    "buildings-a": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. Top-left: a one-storey Filipino sari-sari corner store, painted concrete walls in faded mint, front window with a green steel grille and small serving counter, shelves of colorful snacks and jars visible behind the grille, corrugated tin roof with a short red-and-white striped awning, hand-painted sign reading SARI-SARI STORE. Top-right: a one-storey karinderya eatery, open front with a long wooden counter holding covered steel food trays, warm ochre walls, green corrugated roof, two plastic stools, painted sign reading KARINDERYA. Bottom-left: a one-storey panaderia bakery, cream walls, glass display case of pandesal and breads, blue wooden door, terracotta-red awning, sign reading PANADERIA. Bottom-right: a two-storey Filipino house: concrete ground floor painted terracotta with a roll-up steel shop shutter, wooden upper floor with capiz shell sliding windows and a small balcony with potted plants, rusty-red corrugated roof.",
+      "quadrants_tl_tr_bl_br": [
+        "sari-sari-store",
+        "karinderya",
+        "panaderia",
+        "two-storey-house"
+      ],
+      "source": "docs/art/props/sheet-buildings-a.webp"
+    },
+    "buildings-b": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. Top-left: a narrow three-storey Manila apartment building, painted pale blue concrete, small balconies with laundry hanging on lines, window air-conditioners, a blue plastic water tank on the flat roof. Top-right: a one-storey vulcanizing and motorcycle repair shop with an open front, stacked old tires, a compressor, hand-painted sign reading VULCANIZING, rusty corrugated roof. Bottom-left: a palengke fruit stall: wooden table under a tarp roof stacked with mangoes, bananas, pineapples and lanzones in woven baskets, painted sign reading PRUTAS. Bottom-right: a one-storey pharmacy and general store with a white and green facade, glass door, roll-up shutter half open, sign reading BOTIKA.",
+      "quadrants_tl_tr_bl_br": [
+        "apartment",
+        "vulcanizing",
+        "fruit-stall",
+        "botika"
+      ],
+      "source": "docs/art/props/sheet-buildings-b.webp"
+    },
+    "nature": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. Top-left: a tall coconut palm tree with a gently curved ringed trunk, a full crown of long feathery green fronds and a cluster of green coconuts, flat base at the ground. Top-right: a large rounded mango tree with a thick short trunk, dense dark-green leafy canopy and a few hanging yellow mangoes, flat base. Bottom-left: a clump of three banana plants with big broad bright-green leaves, some leaves slightly torn, one bunch of green bananas, flat base. Bottom-right: a square painted concrete planter box overflowing with magenta bougainvillea and small green shrubs, flat base.",
+      "quadrants_tl_tr_bl_br": [
+        "coconut-palm",
+        "mango-tree",
+        "banana-plants",
+        "bougainvillea-planter"
+      ],
+      "source": "docs/art/props/sheet-nature.webp"
+    },
+    "sea": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. Top-left: a Palawan-style limestone karst islet: tall jagged grey-cream limestone rock with green jungle growing on its ledges and top, a few coconut palms, a narrow white sand beach at its base; the rock base is flat at waterline. Top-right: a small round white-sand islet with two leaning coconut palms and one tiny nipa hut with a thatched roof, flat sand base at waterline. Bottom-left: a nipa hut on bamboo stilts, woven bamboo walls, thick thatched palm-leaf roof, small bamboo ladder, the stilts end at a flat level base. Bottom-right: a traditional Filipino outrigger bangka boat seen whole: slim white wooden hull with a blue and yellow painted stripe, upturned pointed bow, two long bamboo outrigger floats on both sides connected by curved bamboo crossbeams, small outboard engine at the stern, empty with no passengers.",
+      "quadrants_tl_tr_bl_br": [
+        "(unused: water ring)",
+        "(unused: water ring)",
+        "nipa-hut-stilts",
+        "bangka"
+      ],
+      "source": "docs/art/props/sheet-sea.webp"
+    },
+    "islands": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. IMPORTANT: no water, no sea, no ocean, no waves and no blue around any object; every island stands directly on the white background with a flat bottom. Top-left: a tall Palawan-style limestone karst islet: jagged grey-cream limestone pinnacle with green jungle on its ledges and top and a few coconut palms, a narrow pale sand fringe at its flat base. Top-right: a small low white-sand islet with two leaning coconut palms, a little nipa hut with thatched roof and green shrubs, flat sandy base. Bottom-left: a cluster of three dark weathered sea-stack rocks with moss and small plants on top, flat base. Bottom-right: a wide low mangrove-and-palm islet: sand bar with three coconut palms of different heights, bushy green shrubs and driftwood, flat base.",
+      "quadrants_tl_tr_bl_br": [
+        "karst-islet",
+        "hut-islet",
+        "sea-stacks",
+        "palm-islet"
+      ],
+      "source": "docs/art/props/sheet-islands.webp"
+    },
+    "props": {
+      "prompt": "A 2x2 grid sheet of four separate, isolated 3D game assets on a pure flat white background (#FFFFFF). Each asset is centered in its own quadrant with generous white margin, never touching or crossing the quadrant edges. No dividing lines, no labels, no captions, no ground plane, no floor, no cast shadow on the background. Render style: stylized hand-painted 3D game asset, like a premium mobile game diorama prop: chunky readable shapes, clean bevels, warm sunny Philippine daylight, rich natural colors, crisp texture detail, soft ambient occlusion. Camera: three-quarter view from the front-left, slightly elevated (about 20 degrees above), near-orthographic with minimal perspective, entire object fully visible and not cropped. Strictly no flags, no pennants, no banners, no bunting, no national symbols anywhere. No brand logos. No people. Top-left: a Filipino fishball street-food cart: wooden cart on two bicycle wheels with a steel frying pan, skewers in a cup, small bottles of sauce, and a big faded orange beach umbrella on a pole. Top-right: an outdoor set of one round white plastic monobloc table with four white monobloc chairs around it. Bottom-left: a cluster of two blue plastic water drums, one grey water jug, and three terracotta potted plants of different sizes. Bottom-right: a concrete jeepney waiting shed: a small roofed bus stop with a green corrugated roof on steel posts, a long concrete bench, and a painted wall at the back.",
+      "quadrants_tl_tr_bl_br": [
+        "fishball-cart",
+        "monobloc-set",
+        "water-drums",
+        "waiting-shed"
+      ],
+      "source": "docs/art/props/sheet-props.webp"
+    }
+  },
+  "crop": "2x2 split, trimmed to content, padded 12% on white, 1024 px; stray neighbour fragments under 3% of the object were whitened"
+}

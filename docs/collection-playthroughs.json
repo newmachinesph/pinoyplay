@@ -1,0 +1,62 @@
+[
+  {
+    "game": "piko-challenge",
+    "stage": 2,
+    "hops": 15,
+    "lives": 3,
+    "score": 690
+  },
+  {
+    "game": "halo-halo-shop",
+    "served": 3,
+    "stage": 2,
+    "lives": 3,
+    "score": 585
+  },
+  {
+    "game": "basketball-sa-kanto",
+    "baskets": 3,
+    "stage": 2,
+    "lives": 3,
+    "score": 360
+  },
+  {
+    "game": "tumbang-preso",
+    "cans": 1,
+    "stage": 2,
+    "lives": 3,
+    "score": 170
+  },
+  {
+    "game": "tricycle-parking",
+    "parked": 1,
+    "stage": 2,
+    "lives": 3,
+    "score": 410,
+    "x": 0,
+    "z": 6.5,
+    "h": 0
+  },
+  {
+    "game": "island-boat-racing",
+    "gates": 5,
+    "stage": 2,
+    "lives": 3,
+    "score": 575,
+    "distance": 234
+  },
+  {
+    "game": "volcano-escape",
+    "height": 505,
+    "stage": 2,
+    "lives": 3,
+    "score": 505
+  },
+  {
+    "game": "coconut-catcher",
+    "caught": 12,
+    "stage": 2,
+    "lives": 3,
+    "score": 465
+  }
+]

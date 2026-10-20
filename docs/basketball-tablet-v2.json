@@ -1,0 +1,102 @@
+{
+  "viewport": [
+    768,
+    1024
+  ],
+  "canvas": 1,
+  "overflow": 0,
+  "controls": [
+    {
+      "name": "Walk toward hoop",
+      "rect": {
+        "x": 152,
+        "y": 860,
+        "width": 44,
+        "height": 44,
+        "top": 860,
+        "right": 196,
+        "bottom": 904,
+        "left": 152
+      }
+    },
+    {
+      "name": "Walk left",
+      "rect": {
+        "x": 104,
+        "y": 908,
+        "width": 44,
+        "height": 44,
+        "top": 908,
+        "right": 148,
+        "bottom": 952,
+        "left": 104
+      }
+    },
+    {
+      "name": "Walk right",
+      "rect": {
+        "x": 200,
+        "y": 908,
+        "width": 44,
+        "height": 44,
+        "top": 908,
+        "right": 244,
+        "bottom": 952,
+        "left": 200
+      }
+    },
+    {
+      "name": "Walk back",
+      "rect": {
+        "x": 152,
+        "y": 956,
+        "width": 44,
+        "height": 44,
+        "top": 956,
+        "right": 196,
+        "bottom": 1000,
+        "left": 152
+      }
+    },
+    {
+      "name": "HOLD & SHOOT",
+      "rect": {
+        "x": 504,
+        "y": 895,
+        "width": 160,
+        "height": 44,
+        "top": 895,
+        "right": 664,
+        "bottom": 939,
+        "left": 504
+      }
+    },
+    {
+      "name": "Adjust aim left",
+      "rect": {
+        "x": 504,
+        "y": 946,
+        "width": 44,
+        "height": 44,
+        "top": 946,
+        "right": 548,
+        "bottom": 990,
+        "left": 504
+      }
+    },
+    {
+      "name": "Adjust aim right",
+      "rect": {
+        "x": 620,
+        "y": 946,
+        "width": 44,
+        "height": 44,
+        "top": 946,
+        "right": 664,
+        "bottom": 990,
+        "left": 620
+      }
+    }
+  ],
+  "pass": true
+}

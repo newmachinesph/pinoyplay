@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-20",
+  "networkProbe": "blocked",
+  "games": [
+    {
+      "id": "jeepney-rush",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "patintero",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "tricycle-parking",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "island-boat-racing",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "tumbang-preso",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "basketball-sa-kanto",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "piko-challenge",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "halo-halo-shop",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "coconut-catcher",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    },
+    {
+      "id": "volcano-escape",
+      "phase": "running",
+      "canvas": 1,
+      "assets": true,
+      "overflow": false
+    }
+  ]
+}

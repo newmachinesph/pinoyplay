@@ -1,0 +1,109 @@
+/* Shared portrait player chrome. Game scenery and assets stay inside game folders. */
+.basketball-controls{display:flex;align-items:center;justify-content:space-between;gap:18px}.basketball-controls .new-pad{grid-template:repeat(3,44px)/repeat(3,44px)}.basketball-controls .new-pad>span{font-size:8px;font-weight:700}.basketball-shot{flex:1;max-width:160px}.basketball-shot>.action-control{width:100%;min-height:52px;background:#fcd116;color:#071d49;border:1px solid #fff4b0;border-radius:12px;font-size:11px;font-weight:700;padding:8px}.aim-adjust{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-top:7px}.aim-adjust button{width:44px;height:44px;border-radius:9px;background:#fff7df;color:#071d49;font-size:24px}.aim-adjust span{font-size:8px;color:#fff7df}.basketball-shot .power-meter{margin-bottom:12px}
+[data-game=basketball-sa-kanto]:not([data-phase=ready]) #world{bottom:196px}
+@media(max-width:360px){.basketball-controls{gap:12px}.basketball-shot>.action-control{font-size:10px}.basketball-controls .new-pad{gap:3px}}
+:root{--ink:#071d49;--teal:#0038a8;--yellow:#fcd116;--cream:#fff9e9;--coral:#ce1126;background:#f3f6ff}
+body.playing{overflow:hidden;background:#061a42}
+#app{background:radial-gradient(ellipse at 70% 40%,#153875,transparent 60%),#071d49}
+.scene-host{position:absolute;inset:0}
+.player-brand{display:inline-flex;align-items:center;background:#fff;border-radius:12px;padding:8px 13px;width:max-content;text-decoration:none}
+.player-brand img{display:block;width:215px;height:auto}
+.sidebar-back{justify-content:flex-start;margin:24px 0 16px;color:#c5d5f2;font-size:12px;min-height:30px}
+.sidebar-cover{width:100%;aspect-ratio:1.7;object-fit:cover;border-radius:13px;border:1px solid #ffffff33}
+.sidebar-game-info .eyebrow{color:#e9ca58;margin-top:24px;font-size:8px;letter-spacing:1.5px}
+.sidebar-game-info h1{font:700 43px/1 "Barlow Condensed";margin:10px 0 12px}
+.sidebar-game-info>p:last-of-type{font-size:12px;color:#aabcdf;line-height:1.8;margin-bottom:22px}
+.sidebar-game-info ol{padding-left:18px;margin:0;display:grid;gap:13px;color:#aabcdf;font-size:10px;line-height:1.8}
+.sidebar-game-info li::marker{color:#fcd116;font-weight:700}
+.sidebar-bottom .text-button{color:#d1ddf2}.sidebar-bottom p{color:#91a8d0;margin-top:16px}
+.player-brand-small{padding:5px 10px;border-radius:7px;background:#fff;box-shadow:0 2px 15px #071d491a}
+.player-brand-small img{width:110px;height:auto;display:block}
+.game-frame{background:#c3d0ca}
+.game-frame[data-extended=true]:not([data-phase=ready]){background:#071d49}
+#world{background:#071d49}
+.game-header .icon-button{background:#071d4977;backdrop-filter:blur(5px);border-color:#ffffff40}
+.scene-shade{background:linear-gradient(#071d49a8,transparent 45%,#071d4910 60%,#071d49b3)}
+#game-title{margin:6px -8px 0;line-height:1;font-size:0!important;text-shadow:none}
+#game-title img{width:270px;max-width:90%;height:auto;display:block;filter:drop-shadow(0 3px 2px #071d4966)}
+.title-block .eyebrow{margin-bottom:1px;font-size:8px}
+#game-description{margin-top:4px;font-size:12px}
+.welcome-bottom{background:linear-gradient(#071d49f2,#071d49);box-shadow:0 -8px 60px #071d492b}
+.welcome-bottom>p:first-of-type{color:#ccd8f0}
+.control-hint{color:#94acd4!important}.welcome-links .text-button{color:#c4d3ef}
+.primary{box-shadow:0 4px 0 #b79114}.primary:hover{background:#ffdf53}
+.screen-overlay{background:#071d4988}.overlay-card{background:#071d49f7;border-color:#9bb6e744}
+.overlay-card>p{color:#b2c5e8}.save-status{color:#a5c5b7!important}
+.coin-counter{background:#071d49e6;border-color:#385785}.coin-counter>i{font-size:0}.coin-counter>i:after{content:"★";font-size:11px}
+.game-frame[data-extended=true] #hud>div:first-child{background:#071d49eb;border:1px solid #385785;border-radius:10px;padding:8px 11px;box-shadow:0 3px 0 #04122e66;text-shadow:none}
+.game-frame[data-extended=true] #hud strong{font-size:31px}.game-frame[data-extended=true] .run-meta{min-width:90px}
+[data-game=jeepney-rush] .coin-counter>i{font-size:12px}[data-game=jeepney-rush] .coin-counter>i:after{content:none}
+.loading{background:#071d49}#toast{background:#071d49ee;border-color:#ffffff40}
+.game-frame[data-phase=running] .scene-shade,.game-frame[data-phase=paused] .scene-shade{background:linear-gradient(#071d497f,transparent 25%,transparent 76%,#071d4955)}
+.court-controls{display:flex}.control-note{background:#071d49d9}.control-note span{color:#baccea}
+.dpad>span{background:#0038a899}.dpad button{color:#071d49}.drive-controls>button{color:#071d49}
+#extra-controls{color:#071d49}#game-objective{font-size:10px;font-weight:700;line-height:1.5;margin:0 0 9px;padding:8px 11px;border-radius:8px;background:#071d49dd;color:#fff4d0;text-align:center;box-shadow:0 2px 10px #071d4922}
+.new-steering{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.new-steering>button{height:57px;min-width:68px;border-radius:13px;background:#fff7df;color:#071d49;font-size:29px;box-shadow:0 3px 0 #071d4955;border:1px solid #fff9eb}
+.new-steering>.action-control{flex:1;background:#fcd116;font-size:10px;font-weight:700;letter-spacing:.6px;max-width:155px;padding:0 9px}
+.new-steering .steer-hint{font-size:8px;line-height:1.7;color:#fff5d8;text-align:center;text-shadow:0 1px 5px #071d49}
+.new-pad{display:grid;grid-template:repeat(3,44px)/repeat(3,51px);gap:4px;justify-content:center}
+.new-pad>button{background:#fff7df;border:1px solid #fff9eb;border-radius:9px;font-size:25px;color:#071d49}
+.new-pad [data-hold=up]{grid-area:1/2}.new-pad [data-hold=left]{grid-area:2/1}.new-pad [data-hold=right]{grid-area:2/3}.new-pad [data-hold=down]{grid-area:3/2}
+.new-pad>span{grid-area:2/2;display:grid;place-items:center;color:#fcd116}.new-pad .action-control{width:100%;height:100%;background:#fcd116;border-radius:9px;color:#071d49;font-size:8px;font-weight:700;padding:0}
+#extra-controls button{user-select:none;-webkit-user-select:none;touch-action:none}
+#extra-controls button.held{background:#fcd116;box-shadow:inset 0 2px 8px #73521744}
+.power-meter{height:13px;border:2px solid #fff7d6;border-radius:10px;background:#071d49b8;position:relative;margin:0 3px 13px;overflow:visible}
+.power-meter>span{display:block;height:100%;border-radius:8px;background:#e9edff;max-width:100%}
+.power-meter>i{position:absolute;top:-5px;width:7px;height:19px;background:#fcd116;transform:translateX(-50%);border:1px solid #7b651f;border-radius:3px;box-shadow:0 0 0 2px #fcd11633}
+.piko-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.piko-buttons button{height:40px;border:1px solid #fff7de;border-radius:8px;background:#fff5dfed;font:700 23px "Barlow Condensed";color:#071d49}
+.ingredient-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.ingredient-buttons button{display:flex;align-items:center;justify-content:center;gap:6px;height:40px;border-radius:8px;background:#fff7e7;color:#3e3556;font-size:9px;font-weight:700;letter-spacing:.5px}.ingredient-buttons button>span{width:15px;height:15px;border-radius:4px;border:1px solid #071d4922;box-shadow:inset 2px 2px 3px #ffffff55}
+.recipe-actions{display:flex;gap:7px;margin-top:7px}.recipe-actions button{height:42px;background:#fff7e7;border-radius:8px;font-size:11px;font-weight:700;flex:1}.recipe-actions .action-control{background:#fcd116;flex:2}
+dialog{background:#071d49;color:#fff9e9;border-color:#5676a966}
+dialog::backdrop{background:#06193baa}#dialog-content>p{color:#b9cceb}.small-print{color:#92acd2!important}
+.score-tabs{background:#051535}.score-tabs button.active{background:#214479}.score-row{border-color:#ffffff1a}.score-row>span:first-child{color:#8ca5d1}.empty{color:#a5bce1}
+.difficulty-options button{background:#ffffff07!important;border-color:#91afe444!important}.difficulty-options button[aria-pressed=true]{background:#0038a844!important;border-color:#fcd11699!important}.difficulty-options small{color:#a6bee4!important}
+dialog input{background:#ffffff0a;border-color:#90abda66;color:#fff}.text-button{color:#c6d6f2}
+.dialog-head .icon-button{height:44px;width:44px}.how-to span{color:#b5c8e8!important}
+.desktop-note{color:#93abd4}.desktop-note kbd{color:#bfd0eb;border-color:#91add855}.phone-line{border-color:#91add8}
+@media(max-width:1000px){#app{background:#071d49}.game-frame{width:min(100vw,calc(100dvh * .65))}.player-brand-small img{width:108px}}
+@media(max-width:520px){.game-frame{width:100vw}#game-title img{width:256px}.title-block{padding:0 22px}}
+@media(max-height:740px){#game-title img{width:218px}.title-block .eyebrow{font-size:7px}#game-description{font-size:11px}.new-pad{grid-template:repeat(3,40px)/repeat(3,48px)}.new-steering>button{height:49px}#game-objective{font-size:9px;padding:6px 9px;margin-bottom:7px}.piko-buttons button{height:36px}.ingredient-buttons button{height:35px}.recipe-actions button{height:38px}}
+@media(max-height:650px){#game-title img{width:185px;max-height:92px;object-fit:contain;object-position:left center}.title-block .eyebrow{margin-top:0}#game-description{font-size:10px}.welcome-bottom .control-hint{margin:8px 0 11px}#controls{left:16px;right:16px}.new-pad{grid-template:repeat(3,36px)/repeat(3,45px);gap:3px}.new-steering>button{height:46px;min-width:55px}.piko-buttons button{height:32px}.ingredient-buttons button{height:31px}.recipe-actions button{height:35px}#game-objective{font-size:8px}.power-meter{margin-bottom:10px}}
+@media(prefers-reduced-motion:reduce){.loading-sun svg{animation:none}#toast{transition:none}}
+.ingredient-buttons button,.piko-buttons button{min-height:44px}
+.recipe-actions button{min-height:44px}
+.new-pad>button,.new-pad>span{min-height:44px}
+@media(max-height:740px){.new-pad{grid-template-rows:repeat(3,44px)}}
+@media(max-height:650px){.game-frame[data-controls=recipe] #game-objective{display:none}.game-frame[data-controls=tap] #game-objective{padding:3px 5px;font-size:8px}}
+@media(max-height:650px){
+  .game-frame[data-extended=true] #hud>div:first-child{padding:6px 9px}
+  .game-frame[data-extended=true] #hud small{font-size:7px}
+  .game-frame[data-extended=true] #hud strong{font-size:24px}
+  .game-frame[data-extended=true] .run-meta>span{display:none}
+  .game-frame[data-extended=true] .run-meta>b{font-size:8px}
+  .game-frame:is([data-game=coconut-catcher],[data-game=volcano-escape]):not([data-phase=ready]) #world{bottom:90px}
+  .game-frame:is([data-game=tricycle-parking],[data-game=tumbang-preso]):not([data-phase=ready]) #world{bottom:160px}
+}
+/* Opaque, tactile controls stay readable over every scene. */
+#controls button{background:#fff7df;color:#071d49;border:1px solid #d8cda9;box-shadow:0 3px 0 #07204e;min-height:44px;opacity:1}
+#controls button.held,#controls button:active{background:#fcd116;border-color:#fff0a2;box-shadow:0 1px 0 #07204e;transform:translateY(2px)}
+#controls .action-control{background:#fcd116;color:#071d49;border-color:#fff0a2}
+#controls .dpad>span,#controls .new-pad>span{background:#123569;border:1px solid #4c6b9c;color:#ffe36c}
+#controls .control-note,#game-objective{background:#071d49;border:1px solid #385785;color:#fff9e9}
+#controls #brake{background:#123569;color:#fff9e9;border:1px solid #7892bc}
+#controls #brake.yield,#controls #brake.held{background:#fcd116;color:#071d49}
+#controls .power-meter{background:#123569}
+#controls .ingredient-buttons button,#controls .piko-buttons button,#controls .recipe-actions button{background:#fff7df}
+#controls .recipe-actions .action-control{background:#fcd116}
+.game-header .icon-button{background:#071d49;backdrop-filter:none;border-color:#6b83ad}
+.driving-center{padding:8px 0 0;background:#071d49;border:1px solid #385785;border-radius:12px;color:#fff9e9}
+.control-note span{color:#d3def0}
+.difficulty-options button{background:#123569!important}
+.difficulty-options button[aria-pressed=true]{background:#0038a8!important}
+dialog input{background:#123569}
+.welcome-links .text-button{min-height:44px}
+.sidebar-cover{aspect-ratio:3/2;object-fit:contain}
+/* Painted title logos vary in aspect ratio: cap height so tall ones keep the welcome panel in place. */
+#game-title img{width:300px;max-width:88%;max-height:150px;object-fit:contain;object-position:left center;filter:drop-shadow(0 4px 6px #071d4966)}
+@media(max-height:740px){#game-title img{width:240px;max-height:118px}}
+@media(max-height:650px){#game-title img{width:200px;max-height:92px}}

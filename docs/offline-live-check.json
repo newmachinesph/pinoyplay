@@ -1,0 +1,70 @@
+{
+ "date": "2026-10-20",
+ "url": "https://pinoyplay-production.up.railway.app",
+ "method": "Playwright Chromium 390x844: install online, go offline, reload, open each game, press start",
+ "precachedUrls": 88,
+ "pageControlledByServiceWorker": true,
+ "uncachedProbe": "blocked",
+ "results": [
+  {
+   "game": "jeepney-rush",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "patintero",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "tricycle-parking",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "island-boat-racing",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "tumbang-preso",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "basketball-sa-kanto",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "piko-challenge",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "halo-halo-shop",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "coconut-catcher",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "volcano-escape",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-20",
+  "generator": "Built-in image generation",
+  "constraint": "No flags, pennants, banners or flag motifs in any artwork. Titles are integrated into each illustration.",
+  "posters": [
+    {
+      "id": "jeepney-rush",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-3e09f8d3-98b7-4618-86a1-08bc72220421.png"
+    },
+    {
+      "id": "patintero",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-1e99990c-70cc-43c6-97bb-b5847fd32e33.png"
+    },
+    {
+      "id": "tricycle-parking",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-3ac4d605-2181-4269-8ba4-9095b1de419b.png"
+    },
+    {
+      "id": "island-boat-racing",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-feb408f5-69ad-44b3-aeef-4df4d214d7c7.png"
+    },
+    {
+      "id": "tumbang-preso",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-afb72e21-8265-45e7-8b36-97e4b7e3459e.png"
+    },
+    {
+      "id": "basketball-sa-kanto",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-d3d825d3-2f78-465a-87ed-034ce6e8fd2a.png"
+    },
+    {
+      "id": "piko-challenge",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-c7268f2b-cd9a-47f2-a617-2f4acb5f1df6.png"
+    },
+    {
+      "id": "halo-halo-shop",
+      "path": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-4eb0a972-81e9-44b2-9823-60c4ef19bbd8.png"
+    },
+    {
+      "id": "coconut-catcher",
+      "path": "C:/Users/Developer/.codex/generated_images/01a15771-9a16-7741-af22-de67c57dbb91/exec-53f767c3-d354-4e3d-a609-5d476a4b2cea.png"
+    },
+    {
+      "id": "volcano-escape",
+      "path": "C:/Users/Developer/.codex/generated_images/01a15771-9a16-7741-af22-de67c57dbb91/exec-c2f578cc-444c-4f1a-8096-ef5bf639c8d6.png"
+    }
+  ],
+  "court": "C:/Users/Developer/.codex/generated_images/01a15771-9a16-7741-af22-de67c57dbb91/exec-32708241-44e4-4369-adf4-b687098040a2.png",
+  "lava": "C:/Users/Developer/.codex/generated_images/01a15771-9a16-7741-af22-de67c57dbb91/exec-4190cfea-1138-4373-adae-ec8b53e9ffa2.png"
+}

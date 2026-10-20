@@ -1,0 +1,33 @@
+name: pinoyplay
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: nakama
+      POSTGRES_USER: nakama
+      POSTGRES_PASSWORD: localdev
+    volumes:
+      - pinoyplay-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nakama"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  nakama:
+    image: heroiclabs/nakama:3.32.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    entrypoint:
+      - /bin/sh
+      - -ec
+      - |
+        /nakama/nakama migrate up --database.address nakama:localdev@postgres:5432/nakama
+        exec /nakama/nakama --name pinoyplay --database.address nakama:localdev@postgres:5432/nakama --runtime.path /nakama/data/modules --socket.server_key pinoyplay-local --session.token_expiry_sec 7200 --session.refresh_token_expiry_sec 604800 --console.username admin --console.password pinoyplay-local
+    ports:
+      - "127.0.0.1:7350:7350"
+      - "127.0.0.1:7351:7351"
+    volumes:
+      - ./server/runtime:/nakama/data/modules:ro
+volumes:
+  pinoyplay-data:

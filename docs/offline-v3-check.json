@@ -1,0 +1,74 @@
+{
+ "date": "2026-10-20",
+ "build": "production preview after the 9/10 revision",
+ "method": "Playwright Chromium (SwiftShader), 390x844: install service worker online, go offline, reload (returning visit), open each game, press start",
+ "precachedUrls": 89,
+ "pageControlledByServiceWorker": true,
+ "uncachedProbe": "blocked",
+ "results": [
+  {
+   "game": "jeepney-rush",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "patintero",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "tricycle-parking",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "island-boat-racing",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "tumbang-preso",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": [
+    "failed: http://127.0.0.1:7350/v2/account/authenticate/device?create=true&",
+    "error: Failed to load resource: net::ERR_INTERNET_DISCONNECTED"
+   ]
+  },
+  {
+   "game": "basketball-sa-kanto",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "piko-challenge",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "halo-halo-shop",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "coconut-catcher",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  },
+  {
+   "game": "volcano-escape",
+   "canvases": 1,
+   "propWarnings": 0,
+   "errors": []
+  }
+ ],
+ "note": "The tumbang-preso failed request is the optional Nakama score server retrying while offline; scores stay queued."
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "pinoyplay",
+    "kind": "logo",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-58fea87a-8402-431b-9f65-45be3f69fd8d.png",
+    "output": "public/brand/pinoyplay.webp",
+    "prompt": "Transparent horizontal lowercase pinoyplay wordmark in Philippine blue, red, yellow and white. Chunky rounded geometric lettering, compact eight-ray sun / play-button emblem with three stars. No tagline or background."
+  },
+  {
+    "id": "jeepney-rush",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-f20fb080-872a-4c4e-8a09-8123fc010921.png",
+    "output": "public/games/jeepney-rush/cover.webp",
+    "prompt": "Use case: stylized-concept. Asset type: finished featured cover illustration for a Filipino mobile browser game, landscape 3:2 composition. Premium stylized game key art, warm cinematic light, hand-painted material detail over clean dimensional shapes, lively but legible at thumbnail size. Authentic Philippine setting, expressive color, crisp foreground subject, simplified atmospheric depth. Edge-to-edge image, no border, no UI, no text, no letters, no logo, no watermark. Keep important subjects in the central 80%; the lower quarter will carry a separate game logo. Subject: a beautifully detailed traditional Philippine jeepney, teal body, cream-yellow roof, chrome grille and hood, coral accents, open side windows, realistic clean four-wheel construction, roof luggage rails. Dynamic front three-quarter view driving toward us through a Manila barangay street with sari-sari shopfronts, corrugated awnings, power lines and blue-red-yellow fiesta bunting. Vehicle dominates the foreground; sunlight catches chrome, subtle road motion, joyful afternoon adventure. No crashes."
+  },
+  {
+    "id": "patintero",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-b90b308b-4f0b-47b7-8eac-103b9001b102.png",
+    "output": "public/games/patintero/cover.webp",
+    "prompt": "Use case: stylized-concept. Asset type: finished featured cover illustration for a Filipino mobile browser game, landscape 3:2 composition. Premium stylized game key art, warm cinematic light, hand-painted material detail over clean dimensional shapes, lively but legible at thumbnail size. Authentic Philippine setting, expressive color, crisp foreground subject, simplified atmospheric depth. Edge-to-edge image, no border, no UI, no text, no letters, no logo, no watermark. Keep important subjects in the central 80%; the lower quarter will carry a separate game logo. Subject: Filipino children playing patintero in a sunlit barangay lane, a nimble child in a teal T-shirt and yellow cap darting across clear rectangular chalk court lines while children in red shirts guard the horizontal lines. Natural warm brown skin, black hair, believable child proportions and visibly running legs. View from a dynamic elevated three-quarter angle, center foreground is the teal-shirt runner. Detailed sari-sari house edges, tropical plants, bicycle by a wall and fiesta bunting. Charming lively movement, no collisions or aggression."
+  },
+  {
+    "id": "tricycle-parking",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-4d3f4996-e5f5-4a84-8bd6-8d47a78538c0.png",
+    "output": "public/games/tricycle-parking/cover.webp",
+    "prompt": "Use case: stylized-concept. Asset type: finished landscape 3:2 featured cover illustration for the Filipino mobile game Tricycle Parking. Premium stylized game key art with warm cinematic sunlight and hand-painted material detail over clean dimensional shapes. A beautifully modeled Philippine motorized tricycle: real small motorcycle on the LEFT attached to a rounded passenger sidecar on its RIGHT, three wheels total, glossy royal-blue body with yellow roof, polished chrome rails, black tires, clear windshield and small red accents. Front three-quarter view at a carefully marked yellow parking bay in a barangay plaza. A Filipino driver in a red shirt sits on the motorcycle. Concrete paving, potted tropical plants, corrugated shop awnings, fiesta bunting and a small barangay waiting shed behind. Vehicle dominates the foreground, wheels coherent and attached correctly, inviting precision-driving mood. Important subjects centered in the inner 80%, lower quarter will carry separate game logo. No text, letters, logos, UI, watermarks or border. Edge-to-edge illustration."
+  },
+  {
+    "id": "island-boat-racing",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-a1f0cfea-7342-4d42-99a1-ddf228547141.png",
+    "output": "public/games/island-boat-racing/cover.webp",
+    "prompt": "Use case: stylized-concept. Asset type: finished landscape 3:2 featured cover illustration for the Filipino mobile game Island Boat Racing. Premium stylized game key art with cinematic tropical sun and rich hand-painted textures over clean dimensional forms. A vivid red and white Philippine bangka outrigger boat racing toward the viewer on bright turquoise water, long slender pointed wooden hull, two clearly attached bamboo outriggers held by curved crossbeams, small blue canvas canopy, a Filipino boat driver visible beneath it. Front three-quarter dynamic view, graceful white wake and water spray. Yellow and blue racing buoys form a gate ahead, lush limestone islets and coconut palms behind, distant white-sand shore. Boat and outriggers fully inside the composition, coherent real geometry, energetic joyful island feeling. Important subject in central 80%, lower quarter reserved for separate game logo. Edge-to-edge illustration. No text, logo, UI, watermarks or borders."
+  },
+  {
+    "id": "tumbang-preso",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-73a74830-8cc1-47b9-94e9-55694cb118fc.png",
+    "output": "public/games/tumbang-preso/cover.webp",
+    "prompt": "Use case: stylized-concept. Asset type: finished landscape 3:2 featured cover illustration for a Filipino browser game named Tumbang Preso. Premium stylized game key art, warm late-afternoon sunlight, hand-painted textures and clean dimensional shapes, expressive authentic Filipino setting. Main foreground action: a single worn blue rubber flip-flop slipper flying diagonally toward one small empty silver tin can standing on a chalk circle on a concrete barangay lane; freeze the instant just before the slipper knocks the can, dust and dynamic motion arc. In the midground a cheerful Filipino child with warm brown skin in a teal shirt has just thrown the slipper, while another child in a red shirt guards the can. Natural believable children and limbs, charming playful action. Weathered sari-sari walls, tropical plants, wooden fences and blue-red-yellow bunting frame the lane. The slipper and tin can are large, unmistakable and the central focus. Important objects inside central 80%, lower quarter has room for a separate game logo. No text, logos, letters, interface, watermark or border."
+  },
+  {
+    "id": "basketball-sa-kanto",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-d0a9ded8-cded-4063-8447-4851ac00e36c.png",
+    "output": "public/games/basketball-sa-kanto/cover.webp",
+    "prompt": "Use case: stylized-concept. Finished 3:2 landscape featured cover for Filipino mobile game Basketball sa Kanto. Premium cinematic stylized game key art, hand-painted surface details over clean dimensional forms, warm late afternoon light, readable at thumbnail size. A Filipino teenage player with warm brown skin and short black hair in a royal-blue basketball jersey making a jump shot with a bright orange basketball, on an authentic outdoor barangay half-court. Dramatic low three-quarter perspective; basketball hoop and weathered white backboard visible upper right, painted red-blue concrete court, modest colorful houses, corrugated awnings, coconut palms, power cables, red-yellow-blue fiesta bunting, a couple of friends watching. Energetic joyful street basketball, believable anatomy, natural ball and hoop sizes. Main player centrally framed; lower quarter can carry separate game logo later. No text, letters, lettering, logos, UI, watermarks or borders. Edge-to-edge illustration."
+  },
+  {
+    "id": "piko-challenge",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-eb10f3e7-3351-4d1e-b195-1e30cebc1de5.png",
+    "output": "public/games/piko-challenge/cover.webp",
+    "prompt": "Use case: stylized-concept. Finished landscape 3:2 featured cover for Filipino mobile game Piko Challenge. Premium colorful illustrated game key art, soft hand-painted material detail, charming dimensional animated-film feel. A Filipino girl with warm brown skin, black ponytail, yellow T-shirt, blue shorts and white sneakers joyfully hopping on one foot along a traditional chalk piko hopscotch court on a sunlit barangay lane. Elevated three-quarter view showing clearly recognizable single and paired rectangular chalk squares, a flat stone marker, dynamic one-leg hopping pose with outstretched arms. Modest pastel houses, sari-sari shop, hanging potted tropical plants, colorful blue red yellow pennants, a friend watching. Main girl large and central, warm peach light and turquoise shadows, joyful Filipino childhood. Court squares need no numbers. Lower quarter available for separate title overlay. No text, lettering, logos, UI, watermarks or borders."
+  },
+  {
+    "id": "halo-halo-shop",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-5f141614-bd27-4f9d-aada-8034d751b6db.png",
+    "output": "public/games/halo-halo-shop/cover.webp",
+    "prompt": "Use case: stylized-concept. Finished landscape 3:2 featured cover for Filipino mobile game Halo-Halo Shop. Premium whimsical dimensional illustration with hand-painted material detail and appetizing food photography lighting. A spectacular authentic halo-halo in a tall clear fluted glass: visible red sweet beans, green gulaman jelly, yellow jackfruit strips, shaved ice, creamy milk, vivid purple ube ice cream scoop and golden leche flan on top, silver spoon. Large hero glass in center foreground on a colorful Filipino merienda stall counter, small bowls of toppings around it. Smiling Filipino woman vendor softly in the background, pastel lilac and yellow shop, blue-red-yellow striped awning, tropical plants, warm afternoon sunlight. Delicious condensation and translucent ice, charming cheerful atmosphere, rich purple and gold palette. Important food centered, lower quarter may carry separate game logo. No text, lettering, logos, UI, watermarks or border."
+  },
+  {
+    "id": "coconut-catcher",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-7808a782-bd8e-4978-a9a8-6b0dcb43f4b8.png",
+    "output": "public/games/coconut-catcher/cover.webp",
+    "prompt": "Use case: stylized-concept. Finished landscape 3:2 featured cover for Filipino mobile game Coconut Catcher. Premium colorful dimensional animated-film illustration with painterly texture, warm tropical sunlight, crisp big readable foreground forms. A smiling Filipino child in a bright teal shirt and yellow bucket hat holds a beautifully woven brown bayong basket to catch ripe green buko coconuts falling gently from a tall coconut palm. Dynamic upward-looking three-quarter view, one glossy green coconut in mid-air, child and basket central. A lush Philippine coastal coconut grove, turquoise sea, white sand, a small bamboo nipa hut and tiny distant outrigger bangka. Fresh emerald greens, brilliant sea blue, warm gold; playful harvest mood. Believable hands and basket weave, no violence or injury. Important subject centered with lower quarter available for separate logo. No text, lettering, logos, UI, watermarks or border."
+  },
+  {
+    "id": "volcano-escape",
+    "kind": "cover",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-778c6100-35b6-4191-b366-519536f3e5ca.png",
+    "output": "public/games/volcano-escape/cover.webp",
+    "prompt": "Use case: stylized-concept. Finished landscape 3:2 featured cover for Filipino mobile game Volcano Escape. Premium adventurous dimensional illustrated game key art, cinematic warm light, hand-painted textures, dramatic readable silhouette. A brave young Filipino adventurer with warm brown skin, black hair, teal shirt, yellow cap and small red backpack leaps between dark basalt ledges in the foreground. In the distance a majestic symmetrical Mayon-inspired Philippine volcano under a vivid coral and purple sunset, thin glowing lava streams on distant slopes, coconut forest below, floating golden sparks. Character and reachable rock ledges clearly readable, adventurous fantasy obstacle course rather than disaster realism. Dynamic upward composition, no injury or distressed people, visually appealing orange lava far below, cool blue-violet rocks, lush Philippine landscape. Main subject central; lower quarter available for separate logo later. No text, lettering, logos, UI, watermark or border."
+  },
+  {
+    "id": "halo-halo-shop-background",
+    "kind": "background",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-24ddd82a-756f-4f3b-a01d-3cc167db1b24.png",
+    "output": "public/games/halo-halo-shop/background.webp",
+    "prompt": "Use case: game-background. Create a finished production 2D illustrated background for an offline Filipino mobile game called Halo-Halo Shop. Portrait 4:7 composition, clean polished hand-painted casual game art with dimensional shading, material detail and warm tropical sunlight. This is an actual gameplay scene, NOT a poster: no text, typography, logos, interface, game objects in the foreground or decorative borders. A charming Philippine merienda stall with lilac-and-gold striped awning across the top 20%, pastel aqua wall, wooden shelving with transparent jars of red sweet beans, green gulaman, golden jackfruit and purple ube. A friendly smiling adult Filipina vendor with brown skin and black tied-back hair stands BEHIND the counter on the RIGHT, her head centered around x=78%, y=40%, wearing a lilac blouse and cream apron. Do not place anyone in the center-left. A beautiful EMPTY honey-colored wood counter occupies the bottom 42%, viewed slightly from above, with clear empty space at x=25-60%, y=45-72% for a separately rendered dessert glass. No glasses, cups, food bowls or utensils on the foreground counter. A hanging potted tropical plant at top left, soft shadows, rich but controlled colors, lovely detailed wood grain. Keep center-left gameplay area uncluttered, silhouette readable on a phone. Full bleed."
+  },
+  {
+    "id": "coconut-catcher-background",
+    "kind": "background",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-0934c3a7-3895-4bc1-9abf-1f4dfb1845db.png",
+    "output": "public/games/coconut-catcher/background.webp",
+    "prompt": "Use case: game-background. Finished production background for a polished Filipino 2D mobile coconut-catching game, portrait 4:7 ratio. Beautiful hand-painted dimensional casual game environment with lush detailed textures and warm sun, clean readability. A Philippine tropical beach coconut grove. Two tall gently curved coconut palm trunks frame only the FAR LEFT and FAR RIGHT edges; detailed arching green palm fronds and a few green buko coconuts cluster in the upper 18%. Leave the CENTRAL 70% from y=25% through y=78% completely unobstructed for falling gameplay objects. Beyond the grove is calm turquoise ocean and distant soft limestone islands at the horizon around y=58%; pale blue sky and soft puffy clouds. Tiny nipa hut at the far lower-left edge, a tiny far-distant bangka at the horizon. Warm fine sandy beach occupies the bottom 24%, with soft dappled palm shadows and a few tiny shells only at the sides. No people, no baskets, no falling coconuts, no foreground objects in the central lane. No text, lettering, logos, UI or borders. Luxurious inviting Filipino island atmosphere, restrained contrast in the center for game legibility."
+  },
+  {
+    "id": "volcano-escape-background",
+    "kind": "background",
+    "tool": "built-in image_gen",
+    "source": "C:\\Users\\Developer\\.codex\\generated_images\\01a15771-9a16-7741-af22-de67c57dbb91\\exec-3e97537f-2ee0-4354-be99-39cca71cc3ce.png",
+    "output": "public/games/volcano-escape/background.webp",
+    "prompt": "Use case: game-background. Finished production 2D mobile platform-game backdrop, portrait 4:7 composition, polished hand-painted dimensional adventure-game environment. A majestic perfectly cone-shaped Mayon-inspired Philippine volcano seen in the DISTANCE from a rocky ridge, its summit centered x=50%, y=37%, a thin warm orange lava seam and a small drifting plume. Golden coral sunset fading into deep indigo at the top, soft hazy layers of lush Philippine hills and coconut forest in the lower distance. Cool dark bluish basalt cliffs frame only the extreme left and right edges and lower corners. Keep the central 80% clear with soft low-contrast atmospheric mountains and sky so separately drawn platforms and a small character remain readable. No foreground jumping platforms, no characters, no foreground lava, no text, no logos, no UI, no border. Rich natural painted rock texture at edges, lovely cinematic colors, gentle floating golden sparks only near edges, adventurous fantasy mood rather than disaster realism."
+  }
+]

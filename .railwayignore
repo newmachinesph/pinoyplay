@@ -1,0 +1,9 @@
+# Upload only what the Vite build needs.
+/*
+!/src
+!/public
+!/index.html
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/vite.config.ts

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-20",
+  "runs": [
+    {
+      "game": "piko-challenge",
+      "score": "690",
+      "status": "Saved offline · sync pending",
+      "pending": 1
+    },
+    {
+      "game": "basketball-sa-kanto",
+      "score": "110",
+      "status": "Saved offline · sync pending",
+      "pending": 2
+    }
+  ],
+  "afterReload": {
+    "pending": [
+      {
+        "game": "basketball-sa-kanto",
+        "score": 110,
+        "difficulty": "normal"
+      },
+      {
+        "game": "piko-challenge",
+        "score": 690,
+        "difficulty": "normal"
+      }
+    ],
+    "name": "Juan QA",
+    "sound": false
+  },
+  "reconnected": {
+    "pending": 0
+  }
+}

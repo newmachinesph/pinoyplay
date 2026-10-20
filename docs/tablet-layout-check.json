@@ -1,0 +1,20 @@
+[
+  {
+    "id": "halo-halo-shop",
+    "size": [
+      768,
+      1024
+    ],
+    "overflow": false,
+    "buttons": true
+  },
+  {
+    "id": "basketball-sa-kanto",
+    "size": [
+      768,
+      1024
+    ],
+    "overflow": false,
+    "buttons": true
+  }
+]
