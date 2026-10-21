@@ -3,7 +3,7 @@ import { GameScene, PhaserWorld } from '../../core/rendering/phaser-world';
 import { CoconutModel } from './model';
 import { buildCoconutArt } from './art';
 class CoconutScene extends GameScene<CoconutModel> {
-    override preload() { super.preload(); this.load.image('grove-art', `${import.meta.env.BASE_URL}games/coconut-catcher/background.webp`); }
+    override preload() { super.preload(); this.load.image('grove-art', `/games/coconut-catcher/background.webp`); }
     private basket?: Phaser.GameObjects.Image;
     private basketBack?: Phaser.GameObjects.Image;
     private sprites = new Map<number, Phaser.GameObjects.Image>();

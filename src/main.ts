@@ -1,11 +1,6 @@
-import '@fontsource/barlow-condensed/latin-700.css';
-import '@fontsource/barlow-condensed/latin-800.css';
-import '@fontsource/dm-sans/latin-400.css';
-import '@fontsource/dm-sans/latin-500.css';
-import '@fontsource/dm-sans/latin-700.css';
-import './style.css';
-import './player.css';
-import { registerSW } from 'virtual:pwa-register';
+// Styles are imported by app/layout.tsx so they load before this script.
+import { Serwist } from '@serwist/window';
+import { RestAdapter } from './sdk/rest';
 import { GameAudio } from './core/audio';
 import { difficulties, difficultyLabel, type Difficulty } from './core/difficulty';
 import { PinoyPlaySDK, type GameId } from './sdk';
@@ -59,7 +54,7 @@ let deferredInstall: (Event & {
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <aside class="sidebar">
-    <a class="player-brand" href="#" aria-label="PinoyPlay home"><img src="${import.meta.env.BASE_URL}brand/pinoyplay.webp" alt="PinoyPlay" width="225"></a>
+    <a class="player-brand" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" alt="PinoyPlay" width="225"></a>
     <button class="text-button back-home sidebar-back">← Back to all games</button>
     <img id="sidebar-cover" class="sidebar-cover" alt="">
     <div class="sidebar-game-info"><p class="eyebrow" id="sidebar-tag"></p><h1 id="sidebar-title"></h1><p id="sidebar-description"></p><ol id="sidebar-instructions"></ol></div>
@@ -68,7 +63,7 @@ app.innerHTML = `
   <main class="game-frame" aria-label="PinoyPlay game">
     <div id="world" aria-hidden="true"></div>
     <div class="scene-shade"></div>
-    <header class="game-header"><button class="icon-button games-open" aria-label="Choose game">${icon('grid')}</button><a class="mini-brand player-brand-small" href="#" aria-label="PinoyPlay home"><img src="${import.meta.env.BASE_URL}brand/pinoyplay.webp" alt="PinoyPlay"></a><div class="header-actions"><button id="sound" class="icon-button" aria-label="Mute sound"></button><button id="pause" class="icon-button" aria-label="Pause game" hidden>${icon('pause')}</button></div></header>
+    <header class="game-header"><button class="icon-button games-open" aria-label="Choose game">${icon('grid')}</button><a class="mini-brand player-brand-small" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" alt="PinoyPlay"></a><div class="header-actions"><button id="sound" class="icon-button" aria-label="Mute sound"></button><button id="pause" class="icon-button" aria-label="Pause game" hidden>${icon('pause')}</button></div></header>
     <section id="hud" hidden aria-label="Game statistics"><div><small id="hud-label"></small><strong id="hud-value">0</strong><div class="run-meta"><span id="run-mode"></span><b id="run-stage"></b><div class="progress-track"><i id="run-progress"></i></div></div></div><div class="hud-right"><span id="lives"></span><span class="coin-counter"><i>₱</i><b id="hud-secondary">0</b></span></div></section>
     <div id="toast" role="status"></div><div id="crossing-notice" hidden role="status"><span class="crossing-symbol" aria-hidden="true">${icon('crossing')}</span><div class="crossing-copy"><strong id="crossing-title"></strong><small id="crossing-hint"></small></div></div>
     <section id="welcome">
@@ -579,14 +574,32 @@ document.querySelectorAll<HTMLButtonElement>('[data-game]').forEach(b => b.oncli
 function profile() {
     openDialog(`<p class="eyebrow">HEY, KALARO.</p><h2>What’s your name?</h2><p>This name appears with your scores. Your player is saved on this device.</p><form id="profile-form"><label for="username">Player name</label><input id="username" name="username" maxlength="20" minlength="2" autocomplete="nickname" required><p id="profile-error" role="alert"></p><button class="primary" type="submit">Save name ${icon('arrow')}</button></form>`);
     $<HTMLInputElement>('#username').value = sdk.player.username;
-    $('#profile-form').onsubmit = e => { e.preventDefault(); try {
-        sdk.setUsername($<HTMLInputElement>('#username').value);
-        dialog.close();
-        toast('Player name saved.');
-    }
-    catch (error) {
-        $('#profile-error').textContent = (error as Error).message;
-    } };
+    $('#profile-form').onsubmit = async e => {
+        e.preventDefault();
+        const button = $<HTMLButtonElement>('#profile-form button'), message = $('#profile-error');
+        delete message.dataset.tone;
+        try {
+            sdk.setUsername($<HTMLInputElement>('#username').value);
+        }
+        catch (error) {
+            $('#profile-error').textContent = (error as Error).message;
+            return;
+        }
+        // The leaderboard only shows names that passed the review; wait briefly for the verdict.
+        button.disabled = true;
+        message.dataset.tone = 'ok';
+        message.textContent = 'Checking your name…';
+        await Promise.race([sdk.sync(), new Promise(resolve => setTimeout(resolve, 12_000))]);
+        button.disabled = false;
+        if (sdk.nameStatus === 'rejected') {
+            delete message.dataset.tone;
+            message.textContent = 'That name can’t be used on the leaderboard. Please choose another.';
+            return;
+        }
+        // Shown in the dialog: the toast lives in the game screen, which is hidden while the gallery is open.
+        message.textContent = sdk.nameStatus === 'approved' ? 'Saved for the leaderboard.' : 'Saved. Your name appears on the leaderboard once it’s checked.';
+        setTimeout(() => dialog.close(), 1800);
+    };
 }
 document.querySelectorAll<HTMLElement>('.profile-open').forEach(el => el.onclick = profile);
 async function scores() {
@@ -662,21 +675,26 @@ async function install() {
         openDialog(`<p class="eyebrow">KEEP A LITTLE HOME CLOSE</p><h2>Play anywhere.</h2><p>On iPhone or iPad, open this page in Safari, tap Share, then <strong>Add to Home Screen</strong>.</p><p>On Android, use your browser menu and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p><p class="small-print">Open once online and wait for “Ready for offline play” before going offline. Scores stay on this device until they can sync.</p>`);
 }
 $('#install').onclick = install;
-const updateSW = registerSW({
-    onOfflineReady() { document.querySelectorAll('.offline-label').forEach(e => e.textContent = 'All 10 games ready offline'); if (!app.hidden)
-        toast('All 10 games are ready for offline play.'); },
-    onNeedRefresh() {
+// Updates wait for the player: a new service worker only takes over after "Update" so a run is never swapped mid-game.
+if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+    const sw = new Serwist('/serwist/sw.js', { scope: '/', type: 'module' });
+    sw.addEventListener('installed', event => {
+        if (event.isUpdate)
+            return;
+        document.querySelectorAll('.offline-label').forEach(e => e.textContent = 'All 10 games ready offline');
+        if (!app.hidden)
+            toast('All 10 games are ready for offline play.');
+    });
+    sw.addEventListener('waiting', () => {
         const btn = document.createElement('button');
         btn.className = 'update-notice';
         btn.textContent = 'New version ready · Update';
-        btn.onclick = () => { pause(); void updateSW(true); };
+        btn.onclick = () => { pause(); sw.addEventListener('controlling', () => location.reload()); sw.messageSkipWaiting(); };
         document.body.append(btn);
-    },
-    onRegisterError(error) { console.warn('Offline install unavailable', error); $('.offline-label').textContent = 'Offline installation unavailable'; },
-});
-if (import.meta.env.VITE_NAKAMA_URL) {
-    void import('./sdk/nakama').then(({ NakamaAdapter }) => sdk.useOnline(new NakamaAdapter(import.meta.env.VITE_NAKAMA_URL, import.meta.env.VITE_NAKAMA_SERVER_KEY || 'defaultkey')));
+    });
+    sw.register().catch(error => { console.warn('Offline install unavailable', error); $('.offline-label').textContent = 'Offline installation unavailable'; });
 }
+sdk.useOnline(new RestAdapter());
 window.addEventListener('online', () => void sdk.sync());
 gallery = new Gallery(sdk, game => { if (location.hash === '#' + game)
     void loadGame(game);

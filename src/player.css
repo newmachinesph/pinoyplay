@@ -107,3 +107,4 @@ dialog input{background:#123569}
 #game-title img{width:300px;max-width:88%;max-height:150px;object-fit:contain;object-position:left center;filter:drop-shadow(0 4px 6px #071d4966)}
 @media(max-height:740px){#game-title img{width:240px;max-height:118px}}
 @media(max-height:650px){#game-title img{width:200px;max-height:92px}}
+#profile-error[data-tone=ok]{color:#bfe6c8}

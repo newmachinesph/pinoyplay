@@ -5,7 +5,7 @@ import { VolcanoModel } from './model';
 import { buildVolcanoArt } from './art';
 import { LavaSurface } from './lava';
 class VolcanoScene extends GameScene<VolcanoModel> {
-    override preload() { super.preload(); this.load.image('volcano-art', `${import.meta.env.BASE_URL}games/volcano-escape/background.webp`); this.load.image('lava-art', `${import.meta.env.BASE_URL}games/volcano-escape/lava.webp`); }
+    override preload() { super.preload(); this.load.image('volcano-art', `/games/volcano-escape/background.webp`); this.load.image('lava-art', `/games/volcano-escape/lava.webp`); }
     private character?: CourtCharacter;
     private rocks = new Map<number, Phaser.GameObjects.Image>();
     private lava!: LavaSurface;

@@ -1,6 +1,5 @@
 import { catalog, coverUrl, gameById, isGameId, type GameId } from './catalog';
 import type { PinoyPlaySDK } from './sdk';
-import './gallery.css';
 const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>';
 const heart = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21 3.5 12.5A5.5 5.5 0 0 1 12 5.6a5.5 5.5 0 0 1 8.5 6.9Z"/></svg>';
 const search = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>';
@@ -26,7 +25,7 @@ export class Gallery {
         this.element.innerHTML = `
       <a class="skip-link" href="#collection">Skip to games</a>
       <header class="collection-header"><div class="collection-header-inner">
-        <a class="collection-brand" href="#" aria-label="PinoyPlay home"><img src="${import.meta.env.BASE_URL}brand/pinoyplay.webp" width="220" height="73" alt="PinoyPlay"></a>
+        <a class="collection-brand" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" width="220" height="73" alt="PinoyPlay"></a>
         <nav aria-label="Collection navigation"><a href="#collection" class="browse-link">The games</a><button id="favorites-view">${heart}<span>Favorites</span><b id="favorite-count">0</b></button></nav>
         <button id="gallery-profile" class="profile-chip"><span class="profile-avatar">P</span><span class="gallery-player"></span></button>
       </div></header>
@@ -53,9 +52,9 @@ export class Gallery {
           <div id="game-grid" class="game-grid"></div>
           <div id="gallery-empty" class="gallery-empty" hidden><span>✦</span><h3>No games here yet.</h3><p id="empty-copy"></p><button id="reset-filters">See all 10 games ${arrow}</button></div>
         </section>
-        <section class="pocket-banner"><div class="pocket-mark"><img src="${import.meta.env.BASE_URL}brand/mark.svg" width="72" height="72" alt=""></div><div><span class="collection-eyebrow">A LITTLE HOME, IN YOUR POCKET</span><h2>No signal? Tuloy ang laro.</h2><p>Download once. Play all ten offline. Your scores stay with you.</p></div><button id="pocket-install">Install PinoyPlay ${arrow}</button></section>
+        <section class="pocket-banner"><div class="pocket-mark"><img src="/brand/mark.svg" width="72" height="72" alt=""></div><div><span class="collection-eyebrow">A LITTLE HOME, IN YOUR POCKET</span><h2>No signal? Tuloy ang laro.</h2><p>Download once. Play all ten offline. Your scores stay with you.</p></div><button id="pocket-install">Install PinoyPlay ${arrow}</button></section>
       </main>
-      <footer class="collection-footer"><img src="${import.meta.env.BASE_URL}brand/pinoyplay.webp" width="145" height="48" alt="PinoyPlay"><p>Small games. Familiar places. One more round.</p><span>BLUE. RED. GOLD. ALL HEART. <b>★ ★ ★</b></span></footer>`;
+      <footer class="collection-footer"><img src="/brand/pinoyplay.webp" width="145" height="48" alt="PinoyPlay"><p>Small games. Familiar places. One more round.</p><span>BLUE. RED. GOLD. ALL HEART. <b>★ ★ ★</b></span></footer>`;
         document.body.prepend(this.element);
         this.element.querySelector<HTMLButtonElement>('#gallery-profile')!.onclick = profile;
         for (const id of ['gallery-install', 'pocket-install'])

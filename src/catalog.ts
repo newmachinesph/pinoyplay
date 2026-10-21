@@ -106,5 +106,5 @@ export type GameDefinition = typeof catalog[number];
 export const gameIds = catalog.map(game => game.id);
 export const isGameId = (value: unknown): value is GameId => gameIds.includes(value as GameId);
 export const gameById = (id: GameId) => catalog.find(game => game.id === id)!;
-export const coverUrl = (id: GameId) => `${import.meta.env.BASE_URL}games/${id}/cover.webp`;
-export const logoUrl = (id: GameId) => `${import.meta.env.BASE_URL}games/${id}/logo.webp`;
+export const coverUrl = (id: GameId) => `/games/${id}/cover.webp`;
+export const logoUrl = (id: GameId) => `/games/${id}/logo.webp`;

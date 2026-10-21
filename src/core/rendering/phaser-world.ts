@@ -10,10 +10,10 @@ export abstract class GameScene<M extends GameModel> extends Phaser.Scene {
     private paused = false;
     constructor(key: string, protected model: M, private onTick: (dt: number) => void, private onReady: () => void) { super(key); }
     preload() {
-        this.load.image('court-art', `${import.meta.env.BASE_URL}art/patintero-court.webp`);
+        this.load.image('court-art', `/art/patintero-court.webp`);
         for (const name of ['runner', 'girl', 'boy'])
-            this.load.spritesheet(`run-${name}`, `${import.meta.env.BASE_URL}art/run-${name}.webp`, { frameWidth: 128, frameHeight: 128 });
-        this.load.spritesheet('idle-players', `${import.meta.env.BASE_URL}art/idle-players.webp`, { frameWidth: 128, frameHeight: 128 });
+            this.load.spritesheet(`run-${name}`, `/art/run-${name}.webp`, { frameWidth: 128, frameHeight: 128 });
+        this.load.spritesheet('idle-players', `/art/idle-players.webp`, { frameWidth: 128, frameHeight: 128 });
     }
     create() {
         this.build();

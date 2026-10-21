@@ -219,3 +219,13 @@ filling near-white pixels connected to the image border (enclosed whites such as
 chalk letters survive); the anti-aliased outline edge gets alpha from its darkness.
 `scripts/build-collection-art.mjs` still writes the old SVG wordmarks; the game no
 longer references them.
+
+## Third-party data
+
+`src/server/banned-words.json` includes the
+[List of Dirty, Naughty, Obscene, and Otherwise Bad Words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)
+(© Shutterstock, Inc., [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+commit `5faf2ba42d7b1c0977169ec3611df25a3c08eb13`, 27 language files, unmodified
+terms) combined with the project's own `src/server/banned-extra.txt`. No
+endorsement by the authors is implied. It is used server-side only and never
+shipped to the browser.

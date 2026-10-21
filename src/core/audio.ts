@@ -39,7 +39,7 @@ export class GameAudio {
     if (!this.context || this.pending.has(track) || this.buffers.has(track)) return;
     this.pending.add(track);
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}audio/${track}.mp3`);
+      const response = await fetch(`/audio/${track}.mp3`);
       if (!response.ok) throw new Error(`Music ${response.status}`);
       this.buffers.set(track, await this.context.decodeAudioData(await response.arrayBuffer()));
     } catch (error) { console.warn('Music unavailable. Game effects remain available.', error); }

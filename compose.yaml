@@ -1,33 +1,22 @@
 name: pinoyplay
+# Local score database. Development credentials; the port is bound to this machine only.
 services:
-  postgres:
-    image: postgres:16-alpine
+  mysql:
+    image: mysql:9.7
     environment:
-      POSTGRES_DB: nakama
-      POSTGRES_USER: nakama
-      POSTGRES_PASSWORD: localdev
+      MYSQL_DATABASE: pinoyplay
+      MYSQL_USER: pinoyplay
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-localdev}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-localroot}
+    ports:
+      - "127.0.0.1:3306:3306"
     volumes:
-      - pinoyplay-data:/var/lib/postgresql/data
+      - pinoyplay-mysql:/var/lib/mysql
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U nakama"]
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
       interval: 3s
       timeout: 3s
-      retries: 20
-  nakama:
-    image: heroiclabs/nakama:3.32.1
-    depends_on:
-      postgres:
-        condition: service_healthy
-    entrypoint:
-      - /bin/sh
-      - -ec
-      - |
-        /nakama/nakama migrate up --database.address nakama:localdev@postgres:5432/nakama
-        exec /nakama/nakama --name pinoyplay --database.address nakama:localdev@postgres:5432/nakama --runtime.path /nakama/data/modules --socket.server_key pinoyplay-local --session.token_expiry_sec 7200 --session.refresh_token_expiry_sec 604800 --console.username admin --console.password pinoyplay-local
-    ports:
-      - "127.0.0.1:7350:7350"
-      - "127.0.0.1:7351:7351"
-    volumes:
-      - ./server/runtime:/nakama/data/modules:ro
+      retries: 40
 volumes:
-  pinoyplay-data:
+  pinoyplay-mysql:

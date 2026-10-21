@@ -12,9 +12,9 @@ class CourtScene extends Phaser.Scene {
   private fieldLabels: Phaser.GameObjects.Text[] = [];
   constructor(private model: PatinteroModel, private onTick: (dt: number) => void) { super('court'); }
   preload() {
-    this.load.image('court-art', `${import.meta.env.BASE_URL}art/patintero-court.webp`);
-    for (const name of ['runner', 'girl', 'boy']) this.load.spritesheet(`run-${name}`, `${import.meta.env.BASE_URL}art/run-${name}.webp`, { frameWidth: 128, frameHeight: 128 });
-    this.load.spritesheet('idle-players', `${import.meta.env.BASE_URL}art/idle-players.webp`, { frameWidth: 128, frameHeight: 128 });
+    this.load.image('court-art', `/art/patintero-court.webp`);
+    for (const name of ['runner', 'girl', 'boy']) this.load.spritesheet(`run-${name}`, `/art/run-${name}.webp`, { frameWidth: 128, frameHeight: 128 });
+    this.load.spritesheet('idle-players', `/art/idle-players.webp`, { frameWidth: 128, frameHeight: 128 });
   }
   create() {
     if (this.textures.exists('court-art')) {

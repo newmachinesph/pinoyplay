@@ -3,7 +3,7 @@ import { GameScene, PhaserWorld } from '../../core/rendering/phaser-world';
 import { HaloModel, ingredients } from './model';
 import { buildHaloArt } from './art';
 class HaloScene extends GameScene<HaloModel> {
-    override preload() { super.preload(); this.load.image('shop-art', `${import.meta.env.BASE_URL}games/halo-halo-shop/background.webp`); }
+    override preload() { super.preload(); this.load.image('shop-art', `/games/halo-halo-shop/background.webp`); }
     private labels: Phaser.GameObjects.Text[] = [];
     private recipeKey = '';
     protected build() {

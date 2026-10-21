@@ -54,7 +54,7 @@ export class PropLibrary {
     async load(names: PropName[]): Promise<void> {
         await Promise.all(names.map(async name => {
             try {
-                const gltf = await this.loader.loadAsync(`${import.meta.env.BASE_URL}models/${name}.glb`);
+                const gltf = await this.loader.loadAsync(`/models/${name}.glb`);
                 gltf.scene.traverse(o => {
                     if (!(o instanceof T.Mesh))
                         return;

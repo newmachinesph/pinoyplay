@@ -23,29 +23,29 @@ Scores are separate for each game and difficulty. There is no multiplayer.
 
 ## Run
 
-Use Node 22.12+ or Node 24. In Windows PowerShell, use `npm.cmd`.
+Use Node 22.12+ or Node 24. In Windows PowerShell, use `npm.cmd`. The app is
+Next.js 16; the games and UI are DOM-driven TypeScript mounted from `app/page.tsx`.
 
 ```powershell
 npm.cmd ci
+docker compose up -d                 # MySQL score database (optional)
+Copy-Item .env.example .env.local    # then add OPENAI_API_KEY
 npm.cmd run dev
 ```
 
-Development: http://localhost:5173. For the installable offline build:
+Development: http://localhost:3000. For the installable offline build:
 
 ```powershell
 npm.cmd run build
-npm.cmd run preview
+npm.cmd start
 ```
 
-Open http://localhost:4173 and wait for the offline-ready message. Install through
-the browser's Install app / Add to Home Screen action. Development does not
-register the production service worker.
-
-Publish `dist/` to an HTTPS static host. Relative asset paths support subdirectory
-hosting. A phone accessing a LAN address needs HTTPS for service workers and
-installation; desktop localhost is allowed. All engines, fonts, covers, logos
-and game art are cached after the first complete download. Updates use an
-explicit button so they do not interrupt a run.
+Open http://localhost:3000 and wait for "All 10 games ready offline". Install
+through the browser's Install app / Add to Home Screen action. Development does
+not register the service worker (Serwist, `app/sw.ts`); the production worker
+precaches every file in `public/`, the page and the code chunks. Updates use an
+explicit button so they do not interrupt a run. A phone on a LAN address needs
+HTTPS for installation; desktop localhost is allowed.
 
 ## Controls
 
@@ -63,6 +63,8 @@ with Web Audio; no runtime AI or streaming audio is required.
 ## One folder per game
 
 ```text
+app/                       Next.js: layout, page, API routes, service worker
+db/schema.sql              MySQL tables
 src/
   games/
     jeepney-rush/           model.ts, world.ts, jeepney.ts, traffic.ts, crossing.ts
@@ -80,12 +82,13 @@ src/
     game-model.ts          Shared lifecycle, input and score events
     rendering/             Shared scene utilities, generated-prop library, street layout, particles
     audio.ts               Music, effects and engine sound
-  sdk/                     Profile, local scores, queue and Nakama adapter
+  sdk/                     Profile, local scores, upload queue and REST adapter
+  server/                  API logic, MySQL access and AI username review
   catalog.ts               Game metadata and asset paths
   gallery.ts, gallery.css  Collection browsing
   main.ts, player.css      Shared portrait player and dialogs
 public/
-  games/<game-id>/         cover.webp, logo.svg, optional background.webp
+  games/<game-id>/         cover.webp, logo.webp, optional background.webp
   models/                  21 generated 3D props (TRELLIS.2, optimized GLB)
   art/                     Shared court, character atlases and storefront textures
   brand/                   Platform wordmark and icon
@@ -99,17 +102,13 @@ assets.
 ## Deploy (Railway)
 
 Live: https://pinoyplay-production.up.railway.app (Railway project `pinoyplay`,
-workspace Sumnora). Railpack detects Vite, runs `npm run build` and serves `dist/`
-with Caddy. `.railwayignore` uploads only `src`, `public`, `index.html`, the
-package files, `tsconfig.json` and `vite.config.ts`.
+workspace Sumnora) still runs the earlier static Vite build from `main`. The
+Next.js version needs a Node server and a MySQL service on Railway before it is
+deployed; `.railwayignore` already lists the Next.js inputs.
 
 ```powershell
 railway up --ci
 ```
-
-`VITE_NAKAMA_*` is not set on Railway, so the public site keeps scores on each
-device; set those variables in Railway and redeploy once a public HTTPS Nakama
-server exists.
 
 ## Generated 3D props
 
@@ -125,48 +124,64 @@ node scripts/optimize-props.mjs artifacts/props-raw public/models
 Prompts, source sheets and per-model budgets are recorded in
 [asset provenance](docs/ASSETS.md).
 
-## Optional online scores
+## Online scores
 
-[Nakama](https://github.com/heroiclabs/nakama) is the open-source server. The
-project-owned SDK saves results locally before attempting an upload.
+Scores always save on the device first. With MySQL running, `app/api` keeps
+each player's best per game and difficulty and serves the top 10:
 
-```powershell
-docker compose up -d
-Copy-Item .env.example .env.local
-npm.cmd run dev
-```
+| Route | Purpose |
+| --- | --- |
+| `POST /api/players` | Register a device (`id` + random 64-hex `secret`, stored only as a SHA-256 hash) and review its name |
+| `POST /api/scores` | Record a result; the server keeps the best (`GREATEST`), so retries are harmless |
+| `GET /api/leaderboard?game=&difficulty=` | Top 10; unapproved names show as `Kalaro #1234` |
 
-If `.env.local` exists, edit it instead of overwriting it. Restart Vite after
-changing environment values and rebuild production. Omit `VITE_NAKAMA_*` for
-local-only play.
+`.env.local` (gitignored, server-only):
 
-Local API: http://127.0.0.1:7350. Development console:
-http://127.0.0.1:7351 (`admin` / `pinoyplay-local`). Compose uses development
-credentials and loopback-only ports. A deployed client needs a reachable HTTPS
-Nakama URL.
+| Variable | Use |
+| --- | --- |
+| `DATABASE_URL` | `mysql://pinoyplay:localdev@127.0.0.1:3306/pinoyplay` for `docker compose` |
+| `OPENAI_API_KEY` | Reviews usernames. Without it names stay pending (fail closed) |
+| `OPENAI_NAME_MODEL` | Optional, default `gpt-6-luna` |
 
-The 30 leaderboards cover ten games × three difficulties. The pending queue
-retains one highest unsent score per game/mode; server-side best-score semantics
-make retries idempotent. Failed requests retry after reconnection and on a
-30-second timer. Scores, profile, mode and sound preferences survive reloads.
-Each device has an anonymous identity; usernames are display names, not unique
-account handles. Clearing browser storage resets that identity.
+**Usernames.** A name becomes public only once it passes two checks:
 
-Rankings are casual client-reported scores. Server validation, account linking
-and multiplayer are future extensions.
+1. **Word list (free, instant).** `src/server/banned-words.json` holds 2,657
+   terms: the LDNOOBW lists for 27 languages plus `src/server/banned-extra.txt`
+   (Tagalog, Bisaya and Ilocano terms the 14-word Filipino list misses). A name
+   is rejected when the whole folded name or one of its words is on the list;
+   a term inside a longer word ("Therapist", "Scunthorpe") is left to step 2.
+   Rebuild with `node scripts/update-banned-words.mjs`.
+2. **OpenAI review** for every other new name: profanity, lewd or sexual terms,
+   slurs and harassment in any language, leetspeak and spacing tricks. Each
+   folded name (case, accents, leetspeak and separators removed) is reviewed
+   once and cached in `name_reviews`. Measured cost: about 345 input and 50
+   output tokens per name, roughly $6 per 100,000 new names with `gpt-6-luna`.
+   `npx.cmd tsx --env-file=.env.local scripts/check-names.ts [names]` runs names
+   through the live review.
+
+Word list: [List of Dirty, Naughty, Obscene, and Otherwise Bad Words](https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)
+by Shutterstock, Inc., [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+commit `5faf2ba`, merged with project additions; no endorsement implied. To overrule a verdict:
+`UPDATE name_reviews SET allowed = 1 WHERE normalized = 'example';` then the
+player saves the name again. Names are display names, not unique handles.
+
+`compose.yaml` runs MySQL 9.7 with development credentials on 127.0.0.1:3306;
+`db/schema.sql` creates the tables on first start. Requests are rate-limited per
+IP, and name reviews to 5 per device per hour. Scores are still client-reported
+(one ceiling of 10,000,000); there is no anti-cheat.
 
 ## Validation
 
 ```powershell
 npm.cmd test
 npm.cmd run build
-npx.cmd tsx scripts/check-online.ts
+npx.cmd tsx --env-file=.env.local scripts/check-api.ts
 ```
 
-The integration command requires the local backend and removes its own test
-account. Current verification: 48 tests, a successful production build, all 30
-online boards, all ten games starting offline, and real offline score/reload/sync
-checks. See [quality evidence](docs/QUALITY.md) and
+The API check needs MySQL and a running server (`npm.cmd start`) and removes
+its own rows. Current verification: 53 tests, a successful production build,
+the API check, all ten games starting offline on the Next.js build, and a real
+game-over score reaching the online board. See [quality evidence](docs/QUALITY.md) and
 [asset provenance](docs/ASSETS.md). The requested 9/10 quality is a human review
 target; physical iOS/Android testing remains outstanding.
 

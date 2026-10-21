@@ -1,9 +1,9 @@
-# Upload only what the Vite build needs.
+# Upload only what the Next.js build needs.
 /*
+!/app
 !/src
 !/public
-!/index.html
 !/package.json
 !/package-lock.json
 !/tsconfig.json
-!/vite.config.ts
+!/next.config.ts

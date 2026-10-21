@@ -1,0 +1,50 @@
+# Philippine-language terms LDNOOBW's 14-word Filipino list misses. One per line; case,
+# accents, spacing and leetspeak are folded at load. Leave out words with innocent meanings
+# (e.g. "leche" as in leche flan, "Pepe" as a nickname, "atay", "hayop"): the AI review decides those.
+# Tagalog
+putangina
+putangena
+putanginamo
+tanginamo
+tangina mo
+tngina
+pakyu
+pakshet
+punyeta
+tarantado
+gago
+gaga
+ulol
+olol
+kupal
+kantot
+kantutan
+kinantot
+jakol
+jakolero
+jakulero
+chupa
+tsupa
+titi
+tite
+puke
+pekpek
+burat
+bayag
+libog
+malibog
+iyot
+salsal
+# Bisaya / Cebuano
+yawa
+yawaa
+yawaka
+piste
+pisti
+bilat
+oten
+otin
+lubot
+# Ilocano
+ukinnam
+ukininam

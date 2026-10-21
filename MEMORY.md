@@ -148,3 +148,15 @@ Deployed to Railway project `pinoyplay` (workspace Sumnora) at
 https://pinoyplay-production.up.railway.app via `railway up --ci`; .railwayignore
 whitelists build inputs (a locked local file broke indexing of the whole folder).
 Live offline check: docs/offline-live-check.json (all ten games, no errors).
+
+## Next.js + MySQL leaderboard (2026-10-22, branch feat/nextjs-mysql-leaderboard)
+
+User chose: our own Next.js REST API on MySQL (not Nakama, which only runs on
+CockroachDB/Postgres); duplicate names allowed; fail closed when the AI review is
+unavailable; all-time top 10; local Docker MySQL only for now (Railway still on
+the old Vite build from main); model gpt-6-luna. Serwist (@serwist/turbopack) is
+registered from src/main.ts via @serwist/window, not SerwistProvider, because the
+provider reloads the page when the device comes back online. Username check:
+banned-word list first (whole name or whole word only, to avoid Scunthorpe false
+positives), OpenAI for the rest (~$6 per 100k new names). Merged to main and
+pushed 2026-10-22; not deployed (user said do not deploy).

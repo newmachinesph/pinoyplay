@@ -156,7 +156,7 @@ export class RushWorld {
   }
   private async loadFacades() {
     try {
-      const texture = await new THREE.TextureLoader().loadAsync(`${import.meta.env.BASE_URL}art/manila-facades.webp`);
+      const texture = await new THREE.TextureLoader().loadAsync(`/art/manila-facades.webp`);
       if (this.disposed) { texture.dispose(); return; }
       texture.colorSpace = THREE.SRGBColorSpace;
       texture.anisotropy = Math.min(4, this.renderer.capabilities.getMaxAnisotropy());
