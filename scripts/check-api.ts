@@ -15,6 +15,7 @@ const board = async () => (await (await fetch(`${base}/api/leaderboard?game=volc
 const mine = (rows: { username: string; score: number }[]) => rows.find(r => r.score === 9_999_990);
 
 try {
+  await board(); // the first request makes the app create its tables on a fresh database
   // Seed verdicts so the check does not depend on (or spend) the AI review.
   await pool.execute('INSERT INTO name_reviews (normalized, allowed, reason, model) VALUES (?, 1, "seeded", "check"), (?, 0, "seeded", "check")', [normalizeName(good), normalizeName(bad)]);
 

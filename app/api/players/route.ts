@@ -5,7 +5,7 @@ import { db } from '../../../src/server/db';
 export async function POST(request: Request) {
   try {
     rateLimit(`players:${clientIp(request)}`, 20, 60_000);
-    return Response.json(await registerPlayer(db(), await readJson(request)));
+    return Response.json(await registerPlayer(await db(), await readJson(request)));
   } catch (error) {
     return errorResponse(error);
   }

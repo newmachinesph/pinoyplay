@@ -1,4 +1,4 @@
-﻿# PinoyPlay
+# LarongPinoy
 
 Ten Filipino single-player games in one offline-first portrait PWA: five Phaser
 2D games and five Three.js 3D games. The collection has illustrated covers,
@@ -91,7 +91,7 @@ public/
   games/<game-id>/         cover.webp, logo.webp, optional background.webp
   models/                  21 generated 3D props (TRELLIS.2, optimized GLB)
   art/                     Shared court, character atlases and storefront textures
-  brand/                   Platform wordmark and icon
+  brand/                   LarongPinoy wordmark and icon
 ```
 
 Each game's rules and scene live in its own directory. There is no combined
@@ -99,16 +99,22 @@ Each game's rules and scene live in its own directory. There is no combined
 Original generated files and previous builds are preserved outside the published
 assets.
 
-## Deploy (Railway)
+## Deploy (Hostinger)
 
-Live: https://pinoyplay-production.up.railway.app (Railway project `pinoyplay`,
-workspace Sumnora) still runs the earlier static Vite build from `main`. The
-Next.js version needs a Node server and a MySQL service on Railway before it is
-deployed; `.railwayignore` already lists the Next.js inputs.
+Production runs as a Node.js website on Hostinger (larongpinoy.ph, Next.js 16,
+Node 24) with a Hostinger MySQL database. DNS is on Cloudflare: an A record for
+`larongpinoy.ph` to the Hostinger server and a `www` CNAME, both DNS-only.
 
-```powershell
-railway up --ci
-```
+1. Zip `app/ src/ public/ db/ package.json package-lock.json tsconfig.json next.config.ts`
+   (never `.env.local`).
+2. Upload it to the website and build with Node 24, app type Next.js, `npm run build`,
+   output `.next`.
+3. Environment variables (Hostinger Node.js settings, server-only):
+   `DATABASE_URL=mysql://USER:PASS@127.0.0.1:3306/DB`, `OPENAI_API_KEY`,
+   `OPENAI_NAME_MODEL`.
+
+The app creates its tables on first use from `db/schema.sql`, and its SQL runs on
+both MySQL 8+/9 and MariaDB. `.railwayignore` remains for a Railway deploy.
 
 ## Generated 3D props
 

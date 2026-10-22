@@ -101,8 +101,9 @@ export async function submitScore(pool: mysql.Pool, raw: unknown) {
   const s = parseScore(raw);
   if (!await findPlayer(pool, s)) throw new HttpError(404, 'Register the player first');
   await pool.execute(
-    'INSERT INTO scores (player_id, game, difficulty, score) VALUES (?, ?, ?, ?) AS incoming ON DUPLICATE KEY UPDATE score = GREATEST(scores.score, incoming.score)',
-    [s.id, s.game, s.difficulty, s.score]);
+    // Value repeated instead of a row alias: works on MySQL 8+/9 and MariaDB (Hostinger) alike.
+    'INSERT INTO scores (player_id, game, difficulty, score) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE score = GREATEST(score, ?)',
+    [s.id, s.game, s.difficulty, s.score, s.score]);
   return { ok: true };
 }
 

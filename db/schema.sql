@@ -1,4 +1,4 @@
--- PinoyPlay scores. Runs once when the MySQL container initializes an empty volume.
+-- LarongPinoy scores. Applied by Docker on a fresh volume and by the app on first use; portable across MySQL 8+ and MariaDB.
 CREATE TABLE IF NOT EXISTS players (
   id VARCHAR(36) NOT NULL PRIMARY KEY,
   secret_hash BINARY(32) NOT NULL,
@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS players (
   name_status ENUM('pending', 'approved', 'rejected') NOT NULL DEFAULT 'pending',
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS scores (
   player_id VARCHAR(36) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS scores (
   PRIMARY KEY (player_id, game, difficulty),
   KEY board (game, difficulty, score DESC),
   CONSTRAINT scores_player FOREIGN KEY (player_id) REFERENCES players (id) ON DELETE CASCADE
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 -- One AI verdict per folded name (lowercase, no accents, leetspeak mapped, separators removed).
 CREATE TABLE IF NOT EXISTS name_reviews (
