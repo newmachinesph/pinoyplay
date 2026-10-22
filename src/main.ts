@@ -54,16 +54,16 @@ let deferredInstall: (Event & {
 const app = document.querySelector<HTMLDivElement>('#app')!;
 app.innerHTML = `
   <aside class="sidebar">
-    <a class="player-brand" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" alt="PinoyPlay" width="225"></a>
+    <a class="player-brand" href="#" aria-label="LarongPinoy home"><img src="/brand/larongpinoy.webp" alt="LarongPinoy" width="225"></a>
     <button class="text-button back-home sidebar-back">← Back to all games</button>
     <img id="sidebar-cover" class="sidebar-cover" alt="">
     <div class="sidebar-game-info"><p class="eyebrow" id="sidebar-tag"></p><h1 id="sidebar-title"></h1><p id="sidebar-description"></p><ol id="sidebar-instructions"></ol></div>
     <div class="sidebar-bottom"><button class="text-button profile-open">${icon('person')}<span class="player-name"></span></button><p><span class="status-dot"></span><span class="offline-label">Play offline. Keep your scores.</span></p></div>
   </aside>
-  <main class="game-frame" aria-label="PinoyPlay game">
+  <main class="game-frame" aria-label="LarongPinoy game">
     <div id="world" aria-hidden="true"></div>
     <div class="scene-shade"></div>
-    <header class="game-header"><button class="icon-button games-open" aria-label="Choose game">${icon('grid')}</button><a class="mini-brand player-brand-small" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" alt="PinoyPlay"></a><div class="header-actions"><button id="sound" class="icon-button" aria-label="Mute sound"></button><button id="pause" class="icon-button" aria-label="Pause game" hidden>${icon('pause')}</button></div></header>
+    <header class="game-header"><button class="icon-button games-open" aria-label="Choose game">${icon('grid')}</button><a class="mini-brand player-brand-small" href="#" aria-label="LarongPinoy home"><img src="/brand/larongpinoy.webp" alt="LarongPinoy"></a><div class="header-actions"><button id="sound" class="icon-button" aria-label="Mute sound"></button><button id="pause" class="icon-button" aria-label="Pause game" hidden>${icon('pause')}</button></div></header>
     <section id="hud" hidden aria-label="Game statistics"><div><small id="hud-label"></small><strong id="hud-value">0</strong><div class="run-meta"><span id="run-mode"></span><b id="run-stage"></b><div class="progress-track"><i id="run-progress"></i></div></div></div><div class="hud-right"><span id="lives"></span><span class="coin-counter"><i>₱</i><b id="hud-secondary">0</b></span></div></section>
     <div id="toast" role="status"></div><div id="crossing-notice" hidden role="status"><span class="crossing-symbol" aria-hidden="true">${icon('crossing')}</span><div class="crossing-copy"><strong id="crossing-title"></strong><small id="crossing-hint"></small></div></div>
     <section id="welcome">
@@ -77,7 +77,7 @@ app.innerHTML = `
     <div class="loading" id="loading"><span class="loading-sun">${icon('sun')}</span><p>Getting the game ready…</p></div>
   </main>
   <aside class="desktop-note"><span>BUILT FOR<br>YOUR THUMBS.</span><div class="phone-line">${icon('sun')}</div><p>Portrait play.<br>Anywhere you go.</p><kbd>←</kbd> <kbd>→</kbd><small>Keyboard works, too.</small></aside>
-  <dialog id="dialog"><div class="dialog-head"><span class="mini-brand">pinoy<span>play</span></span><button class="icon-button" id="close-dialog" aria-label="Close">${icon('close')}</button></div><div id="dialog-content"></div></dialog>
+  <dialog id="dialog"><div class="dialog-head"><span class="mini-brand">larong<span>pinoy</span></span><button class="icon-button" id="close-dialog" aria-label="Close">${icon('close')}</button></div><div id="dialog-content"></div></dialog>
 `;
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) => document.querySelector<T>(selector)!;
 const show = (selector: string, visible: boolean) => { $(selector).hidden = !visible; };

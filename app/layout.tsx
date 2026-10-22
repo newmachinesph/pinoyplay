@@ -10,10 +10,10 @@ import '../src/player.css';
 import '../src/gallery.css';
 
 export const metadata: Metadata = {
-  title: 'PinoyPlay · Laro tayo.',
+  title: 'LarongPinoy · Laro tayo.',
   description: 'Ten Filipino games. From the kanto to the islands—play offline, keep your scores, and find your next little escape.',
-  applicationName: 'PinoyPlay',
-  appleWebApp: { capable: true, title: 'PinoyPlay', statusBarStyle: 'black-translucent' },
+  applicationName: 'LarongPinoy',
+  appleWebApp: { capable: true, title: 'LarongPinoy', statusBarStyle: 'black-translucent' },
   icons: { icon: '/icon.svg', apple: '/icon-192.png' },
   other: { 'mobile-web-app-capable': 'yes' },
 };

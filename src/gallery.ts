@@ -25,7 +25,7 @@ export class Gallery {
         this.element.innerHTML = `
       <a class="skip-link" href="#collection">Skip to games</a>
       <header class="collection-header"><div class="collection-header-inner">
-        <a class="collection-brand" href="#" aria-label="PinoyPlay home"><img src="/brand/pinoyplay.webp" width="220" height="73" alt="PinoyPlay"></a>
+        <a class="collection-brand" href="#" aria-label="LarongPinoy home"><img src="/brand/larongpinoy.webp" width="220" height="54" alt="LarongPinoy"></a>
         <nav aria-label="Collection navigation"><a href="#collection" class="browse-link">The games</a><button id="favorites-view">${heart}<span>Favorites</span><b id="favorite-count">0</b></button></nav>
         <button id="gallery-profile" class="profile-chip"><span class="profile-avatar">P</span><span class="gallery-player"></span></button>
       </div></header>
@@ -52,9 +52,9 @@ export class Gallery {
           <div id="game-grid" class="game-grid"></div>
           <div id="gallery-empty" class="gallery-empty" hidden><span>✦</span><h3>No games here yet.</h3><p id="empty-copy"></p><button id="reset-filters">See all 10 games ${arrow}</button></div>
         </section>
-        <section class="pocket-banner"><div class="pocket-mark"><img src="/brand/mark.svg" width="72" height="72" alt=""></div><div><span class="collection-eyebrow">A LITTLE HOME, IN YOUR POCKET</span><h2>No signal? Tuloy ang laro.</h2><p>Download once. Play all ten offline. Your scores stay with you.</p></div><button id="pocket-install">Install PinoyPlay ${arrow}</button></section>
+        <section class="pocket-banner"><div class="pocket-mark"><img src="/brand/mark.svg" width="72" height="72" alt=""></div><div><span class="collection-eyebrow">A LITTLE HOME, IN YOUR POCKET</span><h2>No signal? Tuloy ang laro.</h2><p>Download once. Play all ten offline. Your scores stay with you.</p></div><button id="pocket-install">Install LarongPinoy ${arrow}</button></section>
       </main>
-      <footer class="collection-footer"><img src="/brand/pinoyplay.webp" width="145" height="48" alt="PinoyPlay"><p>Small games. Familiar places. One more round.</p><span>BLUE. RED. GOLD. ALL HEART. <b>★ ★ ★</b></span></footer>`;
+      <footer class="collection-footer"><img src="/brand/larongpinoy.webp" width="145" height="36" alt="LarongPinoy"><p>Small games. Familiar places. One more round.</p><span>BLUE. RED. GOLD. ALL HEART. <b>★ ★ ★</b></span></footer>`;
         document.body.prepend(this.element);
         this.element.querySelector<HTMLButtonElement>('#gallery-profile')!.onclick = profile;
         for (const id of ['gallery-install', 'pocket-install'])

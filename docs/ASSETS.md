@@ -13,7 +13,7 @@ none of the ten games calls an AI service while being played.
 | `public/art/manila-facades.webp` | Built-in image generation; three shop-house fronts in a 1536 by 512 atlas | 246,666 bytes |
 | `src/games/jeepney-rush/jeepney.ts` | Project-authored Three.js geometry, materials and canvas route signs | Included in the Three.js game chunk |
 | `docs/art/jeepney-reference.png` | Built-in image generation; reference for the 3D model | Source art only |
-| `public/brand/pinoyplay.webp` | Built-in generated platform logo, trimmed and resized | Local WebP |
+| `public/brand/larongpinoy.webp` | LarongPinoy wordmark (October 2026 rebrand: pinoyplay.ph/.com were taken). `gpt-image-2` with the previous PinoyPlay wordmark as reference (same sun-and-play icon, letterforms and colours), white background flood-filled to alpha with edge un-blending, 880 × 216 WebP. Previous wordmark archived as `docs/art/pinoyplay-wordmark-v1.webp` | Local WebP |
 | `public/games/<id>/cover.webp` | Ten individually generated Philippine-themed illustrations, 1024 × 683 | Local WebP files |
 | `public/games/<id>/logo.webp` | Ten painted title logos from `gpt-image-2` with each game's cover as a style reference, white background removed by edge flood fill, 720 px transparent WebP (previous SVG wordmarks archived in `artifacts/logos-svg-v1/`) | 749,718 bytes total |
 | `public/games/{halo-halo-shop,coconut-catcher,volcano-escape}/background.webp` | Three generated portrait gameplay backgrounds, 720 × 1260 | Local WebP files |
